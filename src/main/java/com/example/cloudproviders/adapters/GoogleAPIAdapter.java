@@ -1,12 +1,11 @@
 package com.example.cloudproviders.adapters;
 
-import com.example.cloudproviders.libraries.aws.AWSConnectionResponse;
 import com.example.cloudproviders.libraries.google.GoogleApi;
 import com.example.cloudproviders.libraries.google.GoogleConnectionResponse;
 import com.example.cloudproviders.models.Connection;
 import com.example.cloudproviders.models.ConnectionStatus;
 
-public class GoogleAdapter implements CloudAdapter{
+public class GoogleAPIAdapter implements CloudAdapter{
     @Override
     public Connection createConnection(long userId) {
         GoogleApi api = new GoogleApi();

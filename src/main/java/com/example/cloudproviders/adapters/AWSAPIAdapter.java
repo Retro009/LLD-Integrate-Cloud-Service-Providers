@@ -5,7 +5,7 @@ import com.example.cloudproviders.libraries.aws.AWSConnectionResponse;
 import com.example.cloudproviders.models.Connection;
 import com.example.cloudproviders.models.ConnectionStatus;
 
-public class AWSAdapter implements CloudAdapter{
+public class AWSAPIAdapter implements CloudAdapter{
 
     @Override
     public Connection createConnection(long userId) {
