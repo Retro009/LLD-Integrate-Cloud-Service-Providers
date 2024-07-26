@@ -6,9 +6,12 @@ import com.example.cloudproviders.models.Connection;
 import com.example.cloudproviders.models.ConnectionStatus;
 
 public class GoogleAPIAdapter implements CloudAdapter{
+    private GoogleApi api;
+    public GoogleAPIAdapter(){
+        api = new GoogleApi();
+    }
     @Override
     public Connection createConnection(long userId) {
-        GoogleApi api = new GoogleApi();
         GoogleConnectionResponse googleConnectionResponse = api.createConnection(userId);
         Connection connection = new Connection();
         connection.setConnectionId(googleConnectionResponse.getConnectionId());
